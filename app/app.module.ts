@@ -10,6 +10,7 @@ import { PhotosModule } from './photos/photos.module';
 
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
+import { PreventUnsavedChangesGuard } from './prevent-unsaved-changes-guard.service';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AuthGuard } from './auth-guard.service';
   ],
   providers: [
     AuthService,
-    AuthGuard
+    AuthGuard,
+    PreventUnsavedChangesGuard
   ],
   bootstrap: [
     AppComponent
