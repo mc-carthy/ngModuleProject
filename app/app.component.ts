@@ -2,6 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: '<messages></messages>',
+  // Property binding for routes is only required if passing parameters
+  template: `
+    <ul>
+      <li><a routerLink="">Home</a></li>
+      <li><a routerLink="messages">Messages</a></li>
+      <li><a routerLink="photos">Photos</a></li>
+    </ul>
+    <router-outlet></router-outlet>
+  `,
 })
 export class AppComponent { }
