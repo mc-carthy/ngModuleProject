@@ -1,19 +1,21 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+
+import { MessagesModule } from './messages/messages.module';
 
 import { AppComponent }  from './app.component';
-import { MessagesComponent } from './messages.component';
 
-import { MessagesService } from './messages.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [
-    AppComponent,
-    MessagesComponent
+  imports: [ 
+    BrowserModule,
+    MessagesModule
   ],
-  providers: [ MessagesService ],
-  bootstrap:    [ AppComponent ]
+  declarations: [
+    AppComponent
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
