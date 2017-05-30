@@ -1,5 +1,8 @@
 
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+
+import { FormComponent } from '../prevent-unsaved-changes-guard.service';
 
 import { MessagesService } from './messages.service'
 
@@ -13,9 +16,10 @@ import { MessagesService } from './messages.service'
         </ul>
     `
 })
-export class MessagesComponent {
+export class MessagesComponent implements FormComponent {
     messages;
     title = "Hello World!";
+    form: FormGroup;
 
     constructor(private _service: MessagesService)
     {
