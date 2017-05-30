@@ -8,6 +8,9 @@ import { PhotosRouting } from './photos/photos.routing';
 import { MessagesModule } from './messages/messages.module';
 import { PhotosModule } from './photos/photos.module';
 
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
+
 
 @NgModule({
   imports: [ 
@@ -19,6 +22,10 @@ import { PhotosModule } from './photos/photos.module';
   ],
   declarations: [
     AppComponent
+  ],
+  providers: [
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [
     AppComponent
